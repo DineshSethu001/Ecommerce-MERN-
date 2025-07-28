@@ -6,11 +6,14 @@ import 'boxicons'
 import 'boxicons/css/boxicons.min.css';
 
 
+
 const Navbar = () => {
     const [visible, setVisible] = useState(false)
     return (
         <div className="py-5 flex items-center justify-between font-medium">
-            <img src={assets.logo} alt="logo" />
+
+        <Link to="/">    <img src={assets.logo} alt="logo" />   
+        </Link>     
             <ul className='hidden sm:flex gap-5 text-sm text-gray-700 '>
                 <NavLink to="/" className="flex flex-col items-center gap-1">
                     <p className=''>Home</p>
@@ -27,7 +30,6 @@ const Navbar = () => {
                 <NavLink to="/contact" className="flex flex-col items-center gap-1">
                     <p className=''>Contact</p>
                     <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' /></NavLink>
-
             </ul>
 
             <div className="flex items-center gap-6">
@@ -57,14 +59,14 @@ const Navbar = () => {
                     <NavLink onClick={() => setVisible(false)} className="py-2 pl-6 " to="/">
                         
                             <p className='flex items-center gap-2'>Home
-                                <i class='bx bx-home-circle'></i>
+                                <i className='bx bx-home-circle'></i>
                             </p>
                             <hr className='w-1/4 ' />
                         
                     </NavLink>
-                    <NavLink onClick={() => setVisible(false)} className="py-2 pl-6" to="/about"><p className='flex items-center gap-2' >ABOUT<i class='bx bx-user-voice'></i></p><hr className='w-1/4 ' /></NavLink>
-                    <NavLink onClick={() => setVisible(false)} className="py-2 pl-6" to="/collection"><p className='flex items-center gap-2'>COLLECTION<i class='bx bx-notepad'></i></p><hr className='w-1/4 ' /></NavLink>
-                    <NavLink onClick={() => setVisible(false)} className="py-2 pl-6" to="/contact"><p className='flex items-center gap-2'>CONTACT<i class='bx bx-phone-incoming'></i></p><hr className='w-1/4 ' /></NavLink>
+                    <NavLink onClick={() => setVisible(false)} className="py-2 pl-6" to="/about"><p className='flex items-center gap-2' >ABOUT<i className='bx bx-user-voice'></i></p><hr className='w-1/4 ' /></NavLink>
+                    <NavLink onClick={() => setVisible(false)} className="py-2 pl-6" to="/collection"><p className='flex items-center gap-2'>COLLECTION<i className='bx bx-notepad'></i></p><hr className='w-1/4 ' /></NavLink>
+                    <NavLink onClick={() => setVisible(false)} className="py-2 pl-6" to="/contact"><p className='flex items-center gap-2'>CONTACT<i className='bx bx-phone-incoming'></i></p><hr className='w-1/4 ' /></NavLink>
                 </div>
             </div>
 
